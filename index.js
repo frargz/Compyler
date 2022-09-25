@@ -1,14 +1,16 @@
 const dotenv = require('dotenv');
 dotenv.config();
 
+const path = require('path');
+
 const express = require('express');
 const app = express();
 
 //const {exec} = require('child_process');
 
-///app.get('/', (req, res) => {
-///    res.sendFile('~/Compyler/index.html')
-///});
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '/index.html'));
+});
 app.get('/endpoint-2', (request, response, next) => {
     response.status(200).json({
         success: true,
