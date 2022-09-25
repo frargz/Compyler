@@ -6,9 +6,9 @@ const app = express();
 
 const {exec} = require('child_process');
 
-app.get('/', (req, res) => {
-    res.sendFile('~/Compyler/index.html')
-});
+///app.get('/', (req, res) => {
+///    res.sendFile('~/Compyler/index.html')
+///});
 app.get('/endpoint-2', (request, response, next) => {
     response.status(200).json({
         success: true,
@@ -23,5 +23,5 @@ app.post('/api', (req, res) => {
     res.end();
 });
 
-const PORT = process.env.PORT || 50001;
+const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => console.log(`server is running on this port ${PORT}`));
