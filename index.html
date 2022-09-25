@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>ComPYler|Home</title>
+
+    <style>
+      .rows, .columns, html, body {
+        height: 100%;
+        margin: 0;
+      }
+      .rows {
+        display: flex;
+        flex-direction: column;
+      }
+      .controlbar {
+        min-height: 10%;
+      }
+      .title {
+        color: rgb(227, 94, 198);
+        font-size:200%;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-shadow: 2px 2px pink;
+      }
+      .columns {
+        display: flex;
+        flex-direction: row;
+      }
+      .controlbar {
+        border-width: 2;
+        min-height: 5%;
+        display: flex;
+      }
+      .lefthalvecontainer, .righthalvecontainer {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        min-height: 70%;
+        margin: 0;
+        border-style: solid;
+        border-width: 0;
+        border-left-width: 1pt;
+        border-right-width: 1pt;
+      }
+      .halvetitle {
+        margin-left: 5px;
+        color: red;
+      }
+      .lefthalve, .righthalve {
+        text-align: left;
+        margin: 0;
+        padding: 5;
+        border-style: solid;
+        flex-basis: 100%;
+        min-height: 70%;
+        border-color: black;
+        border-width: 0;
+        border-top-width: 2pt;
+        border-bottom-width: 1pt;
+        resize: none;
+      }
+      .statusbar {
+        margin: 20;
+        border-style: solid;
+        border-color: black;
+        border-width: 2;
+        border-top-width: 1;
+        min-height: 20%;
+        resize: none;
+      }
+      .controlbar, .statusbar {
+        margin: 0;
+        padding: 0;
+        border-style: solid;
+        border-left-width: 2pt;
+        border-right-width: 2pt;
+      }
+      .MPbutton, .compilebutton, .downloadbutton{
+        margin-left: 30px;
+      }
+    </style>
+
+</head>
+  <body>
+    <div class="rows">
+        <div class="controlbar">
+          <div class="title" id="Title">ComPYler</div>
+          <button class="MPbutton">Micropython</button>
+          <button class="MPbutton" id="compilebutton">Compile</button>
+          <button class="MPbutton" id="downloadbutton">Download</button>
+        </div>
+        <div class="columns">
+            <div class="lefthalvecontainer">
+              <div class="halvetitle">C file name: <input id="leftName"\></div> 
+              <textarea id="leftEditor" class="lefthalve"></textarea>
+            </div>
+            <div class="righthalvecontainer">
+              <div class="halvetitle">CMake code: <input id="rightName"\></div>
+              <textarea id="rightEditor" class="righthalve"></textarea>
+            </div>
+            </div>
+            <textarea disabled class="statusbar"></textarea>
+    </div>
+  </body>
+</html>

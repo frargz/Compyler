@@ -6,14 +6,9 @@ const app = express();
 
 const {exec} = require('child_process');
 
-app.get('/endpoint-1', (request, response, next) => {
-    response.status(200).json({
-        success: true,
-        data: {
-            message: 'Hello from endpoint 1'
-        }
-    })
-})
+app.get('/', (req, res) => {
+    res.sendFile('index.html')
+});
 app.get('/endpoint-2', (request, response, next) => {
     response.status(200).json({
         success: true,
