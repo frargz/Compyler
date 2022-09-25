@@ -4,7 +4,7 @@ dotenv.config();
 const express = require('express');
 const app = express();
 
-const {exec} = require('child_process');
+//const {exec} = require('child_process');
 
 ///app.get('/', (req, res) => {
 ///    res.sendFile('~/Compyler/index.html')
@@ -18,10 +18,10 @@ app.get('/endpoint-2', (request, response, next) => {
     })
 })
 
-app.post('/api', (req, res) => {
-    console.log(req);
-    res.end();
-});
+//app.post('/api', (req, res) => {
+//    console.log(req);
+//    res.end();
+//});
 
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => console.log(`server is running on this port ${PORT}`));
