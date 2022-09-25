@@ -6,7 +6,7 @@ const app = express();
 
 const {exec} = require('child_process');
 
-app.get('/', (req, res) => {
+app.get('~/Compyler/index.html', (req, res) => {
     res.sendFile('index.html')
 });
 app.get('/endpoint-2', (request, response, next) => {
