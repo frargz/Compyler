@@ -18,4 +18,9 @@ app.post('/api', (req, res) => {
 });
 
 const PORT = process.env.PORT;
-app.listen(PORT, () => console.log(`server is running on this port ${PORT}`));
+app.listen(PORT, (err) => {
+    if(err) {
+        return console.error(err)
+    }
+    console.log(`server is running on this port ${PORT}`);
+});
