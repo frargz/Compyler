@@ -21,6 +21,6 @@ app.post('/api', (req, res) => {
 });
 
 const PORT = process.env.PORT;
-app.listen(PORT, () => {
+app.listen(5000, () => {
     console.log(`server is running on this port ${PORT}`);
 });
